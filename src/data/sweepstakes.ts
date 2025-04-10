@@ -21,7 +21,7 @@ const sweepstakesData: Sweepstake[] = [
     rating: 9.8,
     isPopular: true,
     disclaimer: "Used by millions worldwide, especially popular among content creators on platforms like TikTok, YouTube, and more.",
-    siteUrl: "https://example.com/ai-voices"
+    siteUrl: "https://ttsopenai.com/"
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const sweepstakesData: Sweepstake[] = [
     rating: 9.7,
     isPopular: true,
     disclaimer: "Trusted by millions, our platform is constantly updated with a user-friendly interface to make your experience seamless and enjoyable.",
-    siteUrl: "https://example.com/openai-tts"
+    siteUrl: "https://ttsopenai.com/signin"
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const sweepstakesData: Sweepstake[] = [
     endDate: "2025-06-01T23:59:59",
     rating: 9.5,
     disclaimer: "Sign up for free and get bonus usage credits to kickstart your journey.",
-    siteUrl: "https://example.com/ai-voice-tts"
+    siteUrl: "https://ttsopenai.com/history"
   },
   {
     id: 4,
@@ -52,7 +52,7 @@ const sweepstakesData: Sweepstake[] = [
     endDate: "2025-05-20T23:59:59",
     rating: 9.2,
     disclaimer: "Restricted language and voice gender options.",
-    siteUrl: "https://example.com/voice-changer"
+    siteUrl: "https://voice.com/"
   },
   {
     id: 5,
@@ -62,7 +62,7 @@ const sweepstakesData: Sweepstake[] = [
     endDate: "2025-04-25T23:59:59",
     rating: 9.0,
     disclaimer: "Enjoy exciting conversions and multi-meaning translations, though limited by text submission methods.",
-    siteUrl: "https://example.com/music-ai"
+    siteUrl: "https://music.com/"
   }
 ];
 
