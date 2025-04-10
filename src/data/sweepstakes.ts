@@ -42,21 +42,21 @@ const sweepstakesData: Sweepstake[] = [
   },
   {
     id: 4,
-    title: "150% Extra, GC 60,000 + Free SC 30 for $9.99",
-    description: "",
-    image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=2026&auto=format&fit=crop",
+    title: "AI Voice Changer & Dubbing",
+    description: "Limited-character trial version",
+    image: "https://play-lh.googleusercontent.com/31rgFTQOFNYRTrYr-gyWLEgCCgC3FB3SDNYi-DhYYDX2K2dbTt34hObT_4OWHjidKK8=w240-h480-rw",
     endDate: "2025-05-20T23:59:59",
     rating: 9.2,
-    disclaimer: "No purchase necessary. Not available in WA, ID, KY, GA, AL, MI, NV, MT, LA, DE. Void where prohibited by law. Must be 21+. Full T&Cs apply."
+    disclaimer: "Restricted language and voice gender options."
   },
   {
     id: 5,
-    title: "200% Extra on 1st Purchase – GC 60K + FREE SC 40",
-    description: "+ Infinity Wheel",
-    image: "https://images.unsplash.com/photo-1607083206968-13611e3d76db?q=80&w=2015&auto=format&fit=crop",
+    title: "Music AI: Clone & Generator",
+    description: "Music AI",
+    image: "https://play-lh.googleusercontent.com/dUlbE5-1xrcw3KB-MyG4AEOauLbhIasQKsNamhnotF8O-Ko3BJWNN7KwBOh-5c5YKsk=w240-h480-rw",
     endDate: "2025-04-25T23:59:59",
     rating: 9.0,
-    disclaimer: "No purchase necessary. Not available in WA, ID, KY, GA, AL, MI, NV, MT, LA, DE. Void where prohibited by law. Must be 21+. Full T&Cs apply."
+    disclaimer: "Enjoy exciting conversions and multi-meaning translations, though limited by text submission methods."
   }
 ];
 
