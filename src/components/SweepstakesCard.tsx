@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { ArrowRight, Star } from 'lucide-react';
+import { ArrowRight, Star, Play, ExternalLink } from 'lucide-react';
 import { Button } from './ui/button';
 
 export interface SweepstakeProps {
