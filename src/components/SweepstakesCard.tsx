@@ -61,7 +61,7 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
         <div className="w-full md:w-1/6 p-5 flex flex-col items-center justify-center">
           <a href={siteUrl} target="_blank" rel="noopener noreferrer" onClick={e => {
           console.log(`Visit Site clicked for ${title}`);
-        }} className="purple-gradient hover:opacity-90 text-white font-bold px-6 w-full rounded-md transition-all duration-300 flex items-center justify-center shadow-[0_0_10px_rgba(155,135,245,0.3)] py-[13px]">
+        }} className="purple-gradient hover:opacity-90 text-white font-bold w-full rounded-md transition-all duration-300 flex items-center justify-center shadow-[0_0_10px_rgba(155,135,245,0.3)] py-[13px] my-0 px-[14px]">
             <ExternalLink className="mr-1 h-4 w-4" /> VISIT SITE
           </a>
         </div>
