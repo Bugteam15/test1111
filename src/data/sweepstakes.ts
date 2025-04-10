@@ -32,7 +32,7 @@ const sweepstakesData: Sweepstake[] = [
     rating: 9.7,
     isPopular: true,
     disclaimer: "Trusted by millions, our platform is constantly updated with a user-friendly interface to make your experience seamless and enjoyable.",
-    siteUrl: "https://ttsopenai.com/signin"
+    siteUrl: "https://ttsopenai.com/signup"
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const sweepstakesData: Sweepstake[] = [
     endDate: "2025-06-01T23:59:59",
     rating: 9.5,
     disclaimer: "Sign up for free and get bonus usage credits to kickstart your journey.",
-    siteUrl: "https://ttsopenai.com/history"
+    siteUrl: "https://ttsopenai.com/signin"
   },
   {
     id: 4,
