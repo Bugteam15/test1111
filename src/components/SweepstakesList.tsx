@@ -1,13 +1,26 @@
+
 import React from 'react';
 import SweepstakesCard from './SweepstakesCard';
 import sweepstakesData from '../data/sweepstakes';
+
 const SweepstakesList = () => {
   return <section className="my-0 py-0 px-[6px]">
       <div className="container mx-auto">
         
         
         <div className="flex flex-col gap-6 max-w-6xl mx-auto">
-          {sweepstakesData.map(sweepstake => <SweepstakesCard key={sweepstake.id} id={sweepstake.id} title={sweepstake.title} description={sweepstake.description} image={sweepstake.image} endDate={sweepstake.endDate} rating={sweepstake.rating} isPopular={sweepstake.isPopular} disclaimer={sweepstake.disclaimer} />)}
+          {sweepstakesData.map(sweepstake => <SweepstakesCard 
+            key={sweepstake.id} 
+            id={sweepstake.id} 
+            title={sweepstake.title} 
+            description={sweepstake.description} 
+            image={sweepstake.image} 
+            endDate={sweepstake.endDate} 
+            rating={sweepstake.rating} 
+            isPopular={sweepstake.isPopular} 
+            disclaimer={sweepstake.disclaimer}
+            siteUrl={sweepstake.siteUrl} 
+          />)}
         </div>
         
         <div className="mt-12 flex justify-center">
@@ -21,4 +34,5 @@ const SweepstakesList = () => {
       </div>
     </section>;
 };
+
 export default SweepstakesList;

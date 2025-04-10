@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { ArrowRight, Star, ExternalLink } from 'lucide-react';
 import { Button } from './ui/button';
+
 export interface SweepstakeProps {
   id: number;
   title: string;
@@ -12,6 +14,7 @@ export interface SweepstakeProps {
   disclaimer?: string;
   siteUrl?: string;
 }
+
 const SweepstakesCard: React.FC<SweepstakeProps> = ({
   title,
   description,
@@ -33,6 +36,7 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
     }
     return stars;
   };
+
   return <div className="w-full glass-morphism rounded-xl overflow-hidden relative hover:shadow-[0_0_15px_rgba(155,135,245,0.15)] transition-all duration-300 group animate-fade-in">
       {isPopular && <div className="absolute top-0 left-0 purple-gradient text-white text-xs font-bold px-3 py-1 rounded-br-lg z-10">
           POPULAR CHOICE
@@ -68,4 +72,5 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
       </div>
     </div>;
 };
+
 export default SweepstakesCard;

@@ -8,6 +8,7 @@ export interface Sweepstake {
   rating?: number;
   isPopular?: boolean;
   disclaimer?: string;
+  siteUrl?: string;
 }
 
 const sweepstakesData: Sweepstake[] = [
@@ -19,7 +20,8 @@ const sweepstakesData: Sweepstake[] = [
     endDate: "2025-04-30T23:59:59",
     rating: 9.8,
     isPopular: true,
-    disclaimer: "Used by millions worldwide, especially popular among content creators on platforms like TikTok, YouTube, and more."
+    disclaimer: "Used by millions worldwide, especially popular among content creators on platforms like TikTok, YouTube, and more.",
+    siteUrl: "https://example.com/ai-voices"
   },
   {
     id: 2,
@@ -29,7 +31,8 @@ const sweepstakesData: Sweepstake[] = [
     endDate: "2025-05-15T23:59:59",
     rating: 9.7,
     isPopular: true,
-    disclaimer: "Trusted by millions, our platform is constantly updated with a user-friendly interface to make your experience seamless and enjoyable."
+    disclaimer: "Trusted by millions, our platform is constantly updated with a user-friendly interface to make your experience seamless and enjoyable.",
+    siteUrl: "https://example.com/openai-tts"
   },
   {
     id: 3,
@@ -38,7 +41,8 @@ const sweepstakesData: Sweepstake[] = [
     image: "https://play-lh.googleusercontent.com/ojgvYfwLDoqXnD_H8Uj1TL5dk0y7EXlsBNOowSpcFZGg9bdya_yl23SHIDRK_HaKsw=w240-h480-rw",
     endDate: "2025-06-01T23:59:59",
     rating: 9.5,
-    disclaimer: "Sign up for free and get bonus usage credits to kickstart your journey."
+    disclaimer: "Sign up for free and get bonus usage credits to kickstart your journey.",
+    siteUrl: "https://example.com/ai-voice-tts"
   },
   {
     id: 4,
@@ -47,7 +51,8 @@ const sweepstakesData: Sweepstake[] = [
     image: "https://play-lh.googleusercontent.com/31rgFTQOFNYRTrYr-gyWLEgCCgC3FB3SDNYi-DhYYDX2K2dbTt34hObT_4OWHjidKK8=w240-h480-rw",
     endDate: "2025-05-20T23:59:59",
     rating: 9.2,
-    disclaimer: "Restricted language and voice gender options."
+    disclaimer: "Restricted language and voice gender options.",
+    siteUrl: "https://example.com/voice-changer"
   },
   {
     id: 5,
@@ -56,7 +61,8 @@ const sweepstakesData: Sweepstake[] = [
     image: "https://play-lh.googleusercontent.com/dUlbE5-1xrcw3KB-MyG4AEOauLbhIasQKsNamhnotF8O-Ko3BJWNN7KwBOh-5c5YKsk=w240-h480-rw",
     endDate: "2025-04-25T23:59:59",
     rating: 9.0,
-    disclaimer: "Enjoy exciting conversions and multi-meaning translations, though limited by text submission methods."
+    disclaimer: "Enjoy exciting conversions and multi-meaning translations, though limited by text submission methods.",
+    siteUrl: "https://example.com/music-ai"
   }
 ];
 
