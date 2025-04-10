@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Play, ExternalLink, Star } from 'lucide-react';
-import { Card, CardContent, CardFooter, CardHeader } from './ui/card';
 
 export interface SweepstakeProps {
   id: number;
@@ -29,9 +28,9 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
     
     for (let i = 0; i < 5; i++) {
       if (i < fullStars) {
-        stars.push(<Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />);
+        stars.push(<Star key={i} className="w-4 h-4 fill-rewards-purple text-rewards-purple" />);
       } else {
-        stars.push(<Star key={i} className="w-4 h-4 text-gray-300" />);
+        stars.push(<Star key={i} className="w-4 h-4 text-gray-600" />);
       }
     }
     
@@ -39,38 +38,38 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
   };
 
   return (
-    <div className="w-full bg-white rounded-xl overflow-hidden shadow-md border border-gray-200 relative hover:shadow-lg transition-shadow duration-300">
+    <div className="w-full glass-morphism rounded-xl overflow-hidden relative hover:shadow-[0_0_15px_rgba(155,135,245,0.15)] transition-all duration-300 group animate-fade-in">
       {/* Popular badge */}
       {isPopular && (
-        <div className="absolute top-0 left-0 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-br-lg z-10">
+        <div className="absolute top-0 left-0 purple-gradient text-white text-xs font-bold px-3 py-1 rounded-br-lg z-10">
           POPULAR CHOICE
         </div>
       )}
       
       <div className="flex flex-col md:flex-row">
         {/* Logo section */}
-        <div className="w-full md:w-1/4 bg-gray-50 p-5 flex items-center justify-center relative border-b md:border-b-0 md:border-r border-gray-200">
+        <div className="w-full md:w-1/4 bg-white/5 p-5 flex items-center justify-center relative border-b md:border-b-0 md:border-r border-white/10">
           <img 
             src={image} 
             alt={title} 
-            className="w-auto max-h-20 object-contain" 
+            className="w-auto max-h-20 object-contain filter drop-shadow-[0_0_3px_rgba(255,255,255,0.3)] transition-transform duration-300 group-hover:scale-105" 
           />
         </div>
         
         {/* Description section */}
-        <div className="w-full md:w-2/4 p-5 border-b md:border-b-0 md:border-r border-gray-200">
+        <div className="w-full md:w-2/4 p-5 border-b md:border-b-0 md:border-r border-white/10">
           <div>
-            <h3 className="text-xl font-bold text-gray-900">{title}</h3>
-            <p className="mt-2 text-gray-700">{description}</p>
+            <h3 className="text-xl font-bold text-white">{title}</h3>
+            <p className="mt-2 text-rewards-textMedium">{description}</p>
             {disclaimer && (
-              <p className="mt-2 text-xs text-gray-500">{disclaimer}</p>
+              <p className="mt-2 text-xs text-rewards-textGray">{disclaimer}</p>
             )}
           </div>
         </div>
         
         {/* Rating section */}
-        <div className="w-full md:w-1/6 p-5 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-gray-200">
-          <div className="text-3xl font-bold text-indigo-600">{rating}</div>
+        <div className="w-full md:w-1/6 p-5 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-white/10">
+          <div className="text-3xl font-bold purple-gradient-text">{rating}</div>
           <div className="flex mt-1">
             {rating && renderStars(rating)}
           </div>
@@ -79,7 +78,7 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
         {/* CTA section */}
         <div className="w-full md:w-1/6 p-5 flex flex-col items-center justify-center">
           <button 
-            className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 w-full rounded-md transition-all duration-300 mb-2 flex items-center justify-center"
+            className="purple-gradient hover:opacity-90 text-white font-bold py-2 px-6 w-full rounded-md transition-all duration-300 mb-2 flex items-center justify-center shadow-[0_0_10px_rgba(155,135,245,0.3)]"
             onClick={() => {
               console.log(`Play Now clicked for ${title}`);
             }}
@@ -88,7 +87,7 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
           </button>
           <a 
             href="#" 
-            className="text-indigo-600 hover:text-indigo-700 hover:underline text-sm mt-1 flex items-center"
+            className="text-rewards-purple hover:text-rewards-vibrantPurple hover:underline text-sm mt-1 flex items-center transition-colors duration-200"
             onClick={(e) => {
               e.preventDefault();
               console.log(`Visit Site clicked for ${title}`);

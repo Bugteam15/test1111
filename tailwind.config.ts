@@ -63,20 +63,22 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for WinRewardsHub
+				// Custom colors for WinRewardsHub in modern OpenAI style
 				rewards: {
-					dark: '#1A1A1A',
-					orange: '#FF5733',
-					orangeDark: '#E04E2D',
-					blue: '#1E90FF',
-					blueDark: '#1565C0',
-					green: '#34C759',
-					red: '#FF3333',
-					redDark: '#CC2929',
-					lightGray: '#F5F5F5',
-					gray: '#666666',
-					lightBorder: '#E0E0E0',
-					textGray: '#CCCCCC'
+					dark: '#1A1F2C', // Dark purple for backgrounds
+					darkBlue: '#222333', // Dark blue-gray
+					purple: '#9b87f5', // Primary accent color
+					vibrantPurple: '#8B5CF6', // For buttons and highlights
+					softPurple: '#E5DEFF', // For subtle backgrounds
+					softBlue: '#D3E4FD', // For subtle accents
+					softGray: '#F1F0FB', // For light backgrounds
+					graphite: '#222222', // For dark sections
+					lightGray: '#F5F5F5', // For light sections
+					gray: '#8E9196', // For text
+					lightBorder: '#444455', // For borders in dark mode
+					textLight: '#FFFFFF', // For text on dark backgrounds
+					textMedium: '#AAADB0', // For secondary text
+					textGray: '#999999' // For muted text
 				}
 			},
 			borderRadius: {
@@ -100,11 +102,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					"0%": {
+						opacity: "0",
+						transform: "translateY(10px)"
+					},
+					"100%": {
+						opacity: "1",
+						transform: "translateY(0)"
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out'
 			},
 			fontFamily: {
 				'poppins': ['Poppins', 'sans-serif']
