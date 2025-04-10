@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,21 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom colors for WinRewardsHub
+				rewards: {
+					dark: '#1A1A1A',
+					orange: '#FF5733',
+					orangeDark: '#E04E2D',
+					blue: '#1E90FF',
+					blueDark: '#1565C0',
+					green: '#34C759',
+					red: '#FF3333',
+					redDark: '#CC2929',
+					lightGray: '#F5F5F5',
+					gray: '#666666',
+					lightBorder: '#E0E0E0',
+					textGray: '#CCCCCC'
 				}
 			},
 			borderRadius: {
@@ -89,6 +105,9 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
+			},
+			fontFamily: {
+				'poppins': ['Poppins', 'sans-serif']
 			}
 		}
 	},
