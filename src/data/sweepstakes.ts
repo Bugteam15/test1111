@@ -13,13 +13,13 @@ export interface Sweepstake {
 const sweepstakesData: Sweepstake[] = [
   {
     id: 1,
-    title: "150% Extra Coins on 1st Purchase",
-    description: "GC 50K + SC 25 FREE",
-    image: "https://images.unsplash.com/photo-1607083206968-13611e3d76db?q=80&w=2015&auto=format&fit=crop",
+    title: "Text to Speech - AI Voices",
+    description: "Sign up to start for free",
+    image: "https://play-lh.googleusercontent.com/UfW9tMBtZOY3qzvdv9DCRpU-64sLtzDsTzxl87iQI7TQI3zpIRREi7gq21J1-cv_Fvg=w240-h480-rw",
     endDate: "2025-04-30T23:59:59",
     rating: 9.8,
     isPopular: true,
-    disclaimer: "No purchase necessary. Not available in AL, GA, ID, KY, MT, NV, LA, MI, MS, WA, DE, NJ, NY, CT, OH, PA, MD, WV. Void where prohibited by law. Must be 18 or older."
+    disclaimer: "Used by millions worldwide, especially popular among content creators on platforms like TikTok, YouTube, and more."
   },
   {
     id: 2,
