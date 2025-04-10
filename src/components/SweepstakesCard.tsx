@@ -1,6 +1,8 @@
+
 import React from 'react';
-import { ArrowRight, Star, Play, ExternalLink } from 'lucide-react';
+import { ArrowRight, Star, ExternalLink } from 'lucide-react';
 import { Button } from './ui/button';
+
 export interface SweepstakeProps {
   id: number;
   title: string;
@@ -10,14 +12,17 @@ export interface SweepstakeProps {
   rating?: number;
   isPopular?: boolean;
   disclaimer?: string;
+  siteUrl?: string;
 }
+
 const SweepstakesCard: React.FC<SweepstakeProps> = ({
   title,
   description,
   image,
   rating,
   isPopular,
-  disclaimer
+  disclaimer,
+  siteUrl = "#"
 }) => {
   const renderStars = (rating: number) => {
     const stars = [];
@@ -31,6 +36,7 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
     }
     return stars;
   };
+
   return <div className="w-full glass-morphism rounded-xl overflow-hidden relative hover:shadow-[0_0_15px_rgba(155,135,245,0.15)] transition-all duration-300 group animate-fade-in">
       {isPopular && <div className="absolute top-0 left-0 purple-gradient text-white text-xs font-bold px-3 py-1 rounded-br-lg z-10">
           POPULAR CHOICE
@@ -43,8 +49,8 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
         
         <div className="w-full md:w-2/4 p-5 border-b md:border-b-0 md:border-r border-white/10">
           <div>
-            <h3 className="text-xl font-bold text-white">Text to Speech - AI Voices</h3>
-            
+            <h3 className="text-xl font-bold text-white">{title}</h3>
+            {description && <p className="mt-2 text-rewards-textMedium">{description}</p>}
             {disclaimer && <p className="mt-2 text-xs text-rewards-textGray">{disclaimer}</p>}
           </div>
         </div>
@@ -57,19 +63,20 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
         </div>
         
         <div className="w-full md:w-1/6 p-5 flex flex-col items-center justify-center">
-          <button className="purple-gradient hover:opacity-90 text-white font-bold py-2 px-6 w-full rounded-md transition-all duration-300 mb-2 flex items-center justify-center shadow-[0_0_10px_rgba(155,135,245,0.3)]" onClick={() => {
-          console.log(`Play Now clicked for ${title}`);
-        }}>
-            <Play className="mr-1 h-4 w-4" /> PLAY NOW
-          </button>
-          <a href="#" className="text-rewards-purple hover:text-rewards-vibrantPurple hover:underline text-sm mt-1 flex items-center transition-colors duration-200" onClick={e => {
-          e.preventDefault();
-          console.log(`Visit Site clicked for ${title}`);
-        }}>
-            Visit Site <ExternalLink className="ml-1 h-3 w-3" />
+          <a 
+            href={siteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="purple-gradient hover:opacity-90 text-white font-bold py-2 px-6 w-full rounded-md transition-all duration-300 flex items-center justify-center shadow-[0_0_10px_rgba(155,135,245,0.3)]"
+            onClick={(e) => {
+              console.log(`Visit Site clicked for ${title}`);
+            }}
+          >
+            <ExternalLink className="mr-1 h-4 w-4" /> VISIT SITE
           </a>
         </div>
       </div>
     </div>;
 };
+
 export default SweepstakesCard;
