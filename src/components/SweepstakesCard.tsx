@@ -59,7 +59,7 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
         {/* Description section */}
         <div className="w-full md:w-2/4 p-5 border-b md:border-b-0 md:border-r border-white/10">
           <div>
-            <h3 className="text-xl font-bold text-white">{title}</h3>
+            <h3 className="text-xl font-bold text-white">Text to Speech - AI Voices</h3>
             <p className="mt-2 text-rewards-textMedium">{description}</p>
             {disclaimer && (
               <p className="mt-2 text-xs text-rewards-textGray">{disclaimer}</p>
