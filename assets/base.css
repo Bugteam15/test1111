@@ -1,0 +1,100 @@
+
+/* Base styles based on Tailwind utilities */
+:root {
+  --rewards-dark: #1A1F2C;
+  --rewards-darkBlue: #222333;
+  --rewards-purple: #9b87f5;
+  --rewards-vibrantPurple: #8B5CF6;
+  --rewards-textLight: #FFFFFF;
+  --rewards-textMedium: #AAADB0;
+  --rewards-textGray: #999999;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--rewards-dark);
+  color: var(--rewards-textLight);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Utility classes */
+.glass-morphism {
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.3);
+}
+
+.neo-blur {
+  backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(to bottom right, white, rgba(255, 255, 255, 0.7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.purple-gradient {
+  background: linear-gradient(to bottom right, var(--rewards-purple), var(--rewards-vibrantPurple), rgba(155, 135, 245, 0.6));
+}
+
+.purple-gradient-text {
+  background: linear-gradient(to bottom right, var(--rewards-purple), var(--rewards-vibrantPurple), rgba(155, 135, 245, 0.8));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animation utilities */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navigation styles */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--rewards-purple);
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}

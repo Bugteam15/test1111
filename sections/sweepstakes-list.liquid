@@ -1,0 +1,188 @@
+
+<section class="py-16 px-4">
+  <div class="container mx-auto">
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-gradient">{{ section.settings.heading }}</h2>
+      <div class="flex items-center space-x-4">
+        <select class="bg-white/10 border border-white/20 rounded-md px-4 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-rewards-purple">
+          <option>Sort by: Featured</option>
+          <option>Sort by: Rating</option>
+          <option>Sort by: Newest</option>
+          <option>Sort by: Ending Soon</option>
+        </select>
+        <button class="bg-white/10 border border-white/20 rounded-md px-4 py-2 text-white hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-rewards-purple text-sm transition-colors duration-200">
+          Filter
+        </button>
+      </div>
+    </div>
+    
+    <div class="flex flex-col gap-6 max-w-6xl mx-auto">
+      {% for block in section.blocks %}
+        <div class="w-full glass-morphism rounded-xl overflow-hidden relative hover:shadow-[0_0_15px_rgba(155,135,245,0.15)] transition-all duration-300 group animate-fade-in">
+          {% if block.settings.is_popular %}
+            <div class="absolute top-0 left-0 purple-gradient text-white text-xs font-bold px-3 py-1 rounded-br-lg z-10">
+              POPULAR CHOICE
+            </div>
+          {% endif %}
+          
+          <div class="flex flex-col md:flex-row">
+            <!-- Logo section -->
+            <div class="w-full md:w-1/4 bg-white/5 p-5 flex items-center justify-center relative border-b md:border-b-0 md:border-r border-white/10">
+              <img 
+                src="{{ block.settings.image | img_url: 'medium' }}" 
+                alt="{{ block.settings.title }}" 
+                class="w-auto max-h-20 object-contain filter drop-shadow-[0_0_3px_rgba(255,255,255,0.3)] transition-transform duration-300 group-hover:scale-105" 
+              />
+            </div>
+            
+            <!-- Description section -->
+            <div class="w-full md:w-2/4 p-5 border-b md:border-b-0 md:border-r border-white/10">
+              <div>
+                <h3 class="text-xl font-bold text-white">{{ block.settings.title }}</h3>
+                <p class="mt-2 text-rewards-textMedium">{{ block.settings.description }}</p>
+                {% if block.settings.disclaimer %}
+                  <p class="mt-2 text-xs text-rewards-textGray">{{ block.settings.disclaimer }}</p>
+                {% endif %}
+              </div>
+            </div>
+            
+            <!-- Rating section -->
+            <div class="w-full md:w-1/6 p-5 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-white/10">
+              <div class="text-3xl font-bold purple-gradient-text">{{ block.settings.rating }}</div>
+              <div class="flex mt-1">
+                {% assign full_stars = block.settings.rating | floor %}
+                {% for i in (1..5) %}
+                  {% if i <= full_stars %}
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#9b87f5" stroke="#9b87f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  {% else %}
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#606060" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            
+            <!-- CTA section -->
+            <div class="w-full md:w-1/6 p-5 flex flex-col items-center justify-center">
+              <a 
+                href="{{ block.settings.cta_link }}" 
+                class="purple-gradient hover:opacity-90 text-white font-bold py-2 px-6 w-full rounded-md transition-all duration-300 mb-2 flex items-center justify-center shadow-[0_0_10px_rgba(155,135,245,0.3)]"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                PLAY NOW
+              </a>
+              <a 
+                href="{{ block.settings.site_link }}" 
+                class="text-rewards-purple hover:text-rewards-vibrantPurple hover:underline text-sm mt-1 flex items-center transition-colors duration-200"
+              >
+                Visit Site 
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    
+    <div class="mt-12 flex justify-center">
+      <nav class="inline-flex rounded-md shadow-[0_0_10px_rgba(0,0,0,0.2)]">
+        <a href="#" class="py-2 px-4 purple-gradient text-white text-sm font-medium rounded-l-md hover:opacity-90 transition-opacity duration-200">1</a>
+        <a href="#" class="py-2 px-4 bg-white/10 text-white text-sm font-medium hover:bg-white/15 transition-colors duration-200">2</a>
+        <a href="#" class="py-2 px-4 bg-white/10 text-white text-sm font-medium hover:bg-white/15 transition-colors duration-200">3</a>
+        <a href="#" class="py-2 px-4 bg-white/10 text-white text-sm font-medium rounded-r-md hover:bg-white/15 transition-colors duration-200">Next</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sweepstakes List",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Top Sweepstakes"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "sweepstake",
+      "name": "Sweepstake Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "150% Extra Coins on 1st Purchase"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "GC 50K + SC 25 FREE"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Logo Image"
+        },
+        {
+          "type": "text",
+          "id": "rating",
+          "label": "Rating (0-10)",
+          "default": "9.8"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_popular",
+          "label": "Is Popular",
+          "default": false
+        },
+        {
+          "type": "textarea",
+          "id": "disclaimer",
+          "label": "Disclaimer",
+          "default": "No purchase necessary. Void where prohibited by law. Must be 18 or older."
+        },
+        {
+          "type": "url",
+          "id": "cta_link",
+          "label": "Play Now Link"
+        },
+        {
+          "type": "url",
+          "id": "site_link",
+          "label": "Visit Site Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sweepstakes List",
+      "blocks": [
+        {
+          "type": "sweepstake"
+        },
+        {
+          "type": "sweepstake"
+        },
+        {
+          "type": "sweepstake"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

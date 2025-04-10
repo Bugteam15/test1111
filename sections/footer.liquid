@@ -1,0 +1,201 @@
+
+<footer class="neo-blur border-t border-white/10 pt-12 pb-8">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Company Info -->
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold purple-gradient-text">{{ shop.name }}</h3>
+        <p class="text-sm text-rewards-textMedium">{{ section.settings.company_description }}</p>
+        <div class="flex space-x-4">
+          {% if section.settings.facebook_link != blank %}
+            <a href="{{ section.settings.facebook_link }}" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-rewards-purple transition-colors duration-200">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          {% endif %}
+          
+          {% if section.settings.twitter_link != blank %}
+            <a href="{{ section.settings.twitter_link }}" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-rewards-purple transition-colors duration-200">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753C20.18 7.773 21.692 5.25 22 4.009z"></path>
+              </svg>
+            </a>
+          {% endif %}
+          
+          {% if section.settings.instagram_link != blank %}
+            <a href="{{ section.settings.instagram_link }}" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-rewards-purple transition-colors duration-200">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold text-white">{{ section.settings.quick_links_title }}</h3>
+        <ul class="space-y-2">
+          {% for link in linklists[section.settings.menu_1].links %}
+            <li>
+              <a href="{{ link.url }}" class="text-rewards-textMedium hover:text-rewards-purple text-sm transition-colors duration-200">
+                {{ link.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Customer Service -->
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold text-white">{{ section.settings.customer_service_title }}</h3>
+        <ul class="space-y-2">
+          {% for link in linklists[section.settings.menu_2].links %}
+            <li>
+              <a href="{{ link.url }}" class="text-rewards-textMedium hover:text-rewards-purple text-sm transition-colors duration-200">
+                {{ link.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold text-white">{{ section.settings.contact_title }}</h3>
+        {% if section.settings.contact_email != blank %}
+          <div class="flex items-center text-rewards-textMedium text-sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>{{ section.settings.contact_email }}</span>
+          </div>
+        {% endif %}
+        
+        {% if section.settings.contact_phone != blank %}
+          <div class="flex items-center text-rewards-textMedium text-sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>{{ section.settings.contact_phone }}</span>
+          </div>
+        {% endif %}
+        
+        <div class="mt-4">
+          <button class="bg-white/10 hover:bg-white/15 text-white text-sm font-medium py-2 px-4 rounded border border-white/20 transition-colors duration-200">
+            {{ section.settings.newsletter_button_text }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-sm text-rewards-textGray">{{ section.settings.copyright_text }}</p>
+      {% if section.settings.payment_methods_image != blank %}
+        <div class="mt-4 md:mt-0 opacity-70">
+          <img src="{{ section.settings.payment_methods_image | img_url: 'small' }}" 
+               alt="Payment methods" 
+               class="h-6 filter invert" />
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "company_description",
+      "label": "Company Description",
+      "default": "Your destination for the best sweepstakes and rewards online. Enter daily for your chance to win amazing prizes."
+    },
+    {
+      "type": "url",
+      "id": "facebook_link",
+      "label": "Facebook Link"
+    },
+    {
+      "type": "url",
+      "id": "twitter_link",
+      "label": "Twitter Link"
+    },
+    {
+      "type": "url",
+      "id": "instagram_link",
+      "label": "Instagram Link"
+    },
+    {
+      "type": "text",
+      "id": "quick_links_title",
+      "label": "Quick Links Title",
+      "default": "Quick Links"
+    },
+    {
+      "type": "link_list",
+      "id": "menu_1",
+      "label": "Quick Links Menu",
+      "default": "footer"
+    },
+    {
+      "type": "text",
+      "id": "customer_service_title",
+      "label": "Customer Service Title",
+      "default": "Customer Service"
+    },
+    {
+      "type": "link_list",
+      "id": "menu_2",
+      "label": "Customer Service Menu",
+      "default": "footer"
+    },
+    {
+      "type": "text",
+      "id": "contact_title",
+      "label": "Contact Title",
+      "default": "Contact Us"
+    },
+    {
+      "type": "text",
+      "id": "contact_email",
+      "label": "Contact Email",
+      "default": "support@example.com"
+    },
+    {
+      "type": "text",
+      "id": "contact_phone",
+      "label": "Contact Phone",
+      "default": "(123) 456-7890"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_button_text",
+      "label": "Newsletter Button Text",
+      "default": "Subscribe to Newsletter"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "Copyright Text",
+      "default": "© 2025 Company Name. All rights reserved."
+    },
+    {
+      "type": "image_picker",
+      "id": "payment_methods_image",
+      "label": "Payment Methods Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer",
+      "category": "Layout"
+    }
+  ]
+}
+{% endschema %}

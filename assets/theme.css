@@ -1,0 +1,51 @@
+
+/* Theme-specific styles beyond the base utilities */
+
+/* Add any additional theme-specific styles here */
+.text-gradient {
+  background: linear-gradient(to bottom right, white, rgba(255, 255, 255, 0.7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.purple-gradient {
+  background: linear-gradient(to bottom right, var(--rewards-purple), var(--rewards-vibrantPurple), rgba(155, 135, 245, 0.6));
+}
+
+.purple-gradient-text {
+  background: linear-gradient(to bottom right, var(--rewards-purple), var(--rewards-vibrantPurple), rgba(155, 135, 245, 0.8));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Utility classes for Shopify editor */
+.shopify-section {
+  position: relative;
+}
+
+.color-override-light {
+  color: var(--rewards-textLight) !important;
+}
+
+.color-override-medium {
+  color: var(--rewards-textMedium) !important;
+}
+
+/* Animation utilities */
+.glass-morphism:not(.animate-fade-in) {
+  opacity: 0;
+}
+
+.glass-morphism.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
