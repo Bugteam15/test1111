@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { ArrowRight, Star, ExternalLink } from 'lucide-react';
 import { Button } from './ui/button';
-
 export interface SweepstakeProps {
   id: number;
   title: string;
@@ -14,7 +12,6 @@ export interface SweepstakeProps {
   disclaimer?: string;
   siteUrl?: string;
 }
-
 const SweepstakesCard: React.FC<SweepstakeProps> = ({
   title,
   description,
@@ -36,7 +33,6 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
     }
     return stars;
   };
-
   return <div className="w-full glass-morphism rounded-xl overflow-hidden relative hover:shadow-[0_0_15px_rgba(155,135,245,0.15)] transition-all duration-300 group animate-fade-in">
       {isPopular && <div className="absolute top-0 left-0 purple-gradient text-white text-xs font-bold px-3 py-1 rounded-br-lg z-10">
           POPULAR CHOICE
@@ -63,20 +59,13 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
         </div>
         
         <div className="w-full md:w-1/6 p-5 flex flex-col items-center justify-center">
-          <a 
-            href={siteUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="purple-gradient hover:opacity-90 text-white font-bold py-2 px-6 w-full rounded-md transition-all duration-300 flex items-center justify-center shadow-[0_0_10px_rgba(155,135,245,0.3)]"
-            onClick={(e) => {
-              console.log(`Visit Site clicked for ${title}`);
-            }}
-          >
+          <a href={siteUrl} target="_blank" rel="noopener noreferrer" onClick={e => {
+          console.log(`Visit Site clicked for ${title}`);
+        }} className="purple-gradient hover:opacity-90 text-white font-bold px-6 w-full rounded-md transition-all duration-300 flex items-center justify-center shadow-[0_0_10px_rgba(155,135,245,0.3)] py-[13px]">
             <ExternalLink className="mr-1 h-4 w-4" /> VISIT SITE
           </a>
         </div>
       </div>
     </div>;
 };
-
 export default SweepstakesCard;

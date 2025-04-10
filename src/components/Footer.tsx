@@ -91,9 +91,9 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-rewards-textGray">© 2025 WinRewardsHub. All rights reserved.</p>
+          <p className="text-sm text-rewards-textGray">© 2025 OpenAi Ranking. All rights reserved.</p>
           <div className="mt-4 md:mt-0 opacity-70">
-            <img src="https://cdn.shopify.com/s/files/1/0494/0761/6067/files/payment-methods.png" alt="Payment methods" className="h-6 filter invert" />
+            
           </div>
         </div>
       </div>
