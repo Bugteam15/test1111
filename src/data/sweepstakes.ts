@@ -23,22 +23,22 @@ const sweepstakesData: Sweepstake[] = [
   },
   {
     id: 2,
-    title: "Get Up To 625,000 Gold Coins",
-    description: "Coins + 125 SC Free + 1250 VIP Points",
-    image: "https://images.unsplash.com/photo-1584052189791-2b028d70f4d6?q=80&w=1974&auto=format&fit=crop",
+    title: "Text To Speech OpenAI",
+    description: "Try it cheap and easy",
+    image: "https://play-lh.googleusercontent.com/Im726gXJYWu6Lw0M6BcPNV1BdlO7QVB1wQfMtEnsn1-J4e80WI7AEivVXDrK1ypsm0o=w240-h480-rw",
     endDate: "2025-05-15T23:59:59",
     rating: 9.7,
     isPopular: true,
-    disclaimer: "No purchase necessary. Not available in WA, ID, KY, GA, AL, MI, NV, MT, LA, DE. Void where prohibited by law. Must be 21+. Full T&Cs apply."
+    disclaimer: "Trusted by millions, our platform is constantly updated with a user-friendly interface to make your experience seamless and enjoyable."
   },
   {
     id: 3,
-    title: "Get Up to 57.5K GC + 27.5 FREE SC",
-    description: "",
-    image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop",
+    title: "AI Voice: Text to Speech TTS",
+    description: "Join free, get extra uses",
+    image: "https://play-lh.googleusercontent.com/ojgvYfwLDoqXnD_H8Uj1TL5dk0y7EXlsBNOowSpcFZGg9bdya_yl23SHIDRK_HaKsw=w240-h480-rw",
     endDate: "2025-06-01T23:59:59",
     rating: 9.5,
-    disclaimer: "No purchase necessary. Not available in WA, ID, KY, GA, AL, MI, NV, MT, LA, DE. Void where prohibited by law. Must be 21+. Full T&Cs apply."
+    disclaimer: "Sign up for free and get bonus usage credits to kickstart your journey."
   },
   {
     id: 4,
