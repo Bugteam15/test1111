@@ -3,10 +3,10 @@ import React from 'react';
 
 const CTASection = () => {
   return (
-    <section className="py-16 bg-rewards-lightGray">
+    <section className="py-16 bg-[#191c35]">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold text-black">Don't Miss Out!</h2>
-        <p className="mt-4 text-rewards-gray text-lg max-w-2xl mx-auto">
+        <h2 className="text-3xl font-bold text-white">Don't Miss Out!</h2>
+        <p className="mt-4 text-gray-300 text-lg max-w-2xl mx-auto">
           Sign up today and start winning exclusive rewards.
         </p>
         <button 

@@ -5,10 +5,10 @@ import sweepstakesData from '../data/sweepstakes';
 
 const SweepstakesList = () => {
   return (
-    <section className="py-16 px-4">
+    <section className="py-16 px-4 bg-gradient-to-b from-[#12142e] to-[#1f1b38]">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-10">Current Sweepstakes</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+        <h2 className="text-3xl font-bold text-center mb-10 text-white">Top Sweepstakes</h2>
+        <div className="flex flex-col gap-6 max-w-5xl mx-auto">
           {sweepstakesData.map((sweepstake) => (
             <SweepstakesCard
               key={sweepstake.id}
@@ -17,6 +17,9 @@ const SweepstakesList = () => {
               description={sweepstake.description}
               image={sweepstake.image}
               endDate={sweepstake.endDate}
+              rating={sweepstake.rating}
+              isPopular={sweepstake.isPopular}
+              disclaimer={sweepstake.disclaimer}
             />
           ))}
         </div>
