@@ -13,7 +13,7 @@ const Hero = () => {
       <div className="absolute -top-40 -left-40 w-80 h-80 bg-rewards-purple/30 rounded-full filter blur-[100px]"></div>
       <div className="absolute -bottom-60 -right-40 w-96 h-96 bg-rewards-vibrantPurple/20 rounded-full filter blur-[120px]"></div>
       
-      <div className="relative max-w-7xl pt-16 pb-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center my-0 mx-0">
+      <div className="relative max-w-7xl pt-16 pb-12 px-4 sm:px-6 flex flex-col items-center text-center py-0 mx-[2px] my-[4px] lg:px-0">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight animate-fade-in">
           <span className="block text-gradient text-7xl font-bold text-violet-400">Top Text To Speech-OpenAI</span>
           <span className="block purple-gradient-text mt-2 text-teal-600">April 2025</span>
