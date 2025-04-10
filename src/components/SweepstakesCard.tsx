@@ -1,6 +1,6 @@
-
 import React from 'react';
-import { Play, ExternalLink, Star } from 'lucide-react';
+import { ArrowRight, Star } from 'lucide-react';
+import { Button } from './ui/button';
 
 export interface SweepstakeProps {
   id: number;
@@ -21,7 +21,6 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
   isPopular,
   disclaimer
 }) => {
-  // Generate stars based on rating
   const renderStars = (rating: number) => {
     const stars = [];
     const fullStars = Math.floor(rating);
@@ -39,7 +38,6 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
 
   return (
     <div className="w-full glass-morphism rounded-xl overflow-hidden relative hover:shadow-[0_0_15px_rgba(155,135,245,0.15)] transition-all duration-300 group animate-fade-in">
-      {/* Popular badge */}
       {isPopular && (
         <div className="absolute top-0 left-0 purple-gradient text-white text-xs font-bold px-3 py-1 rounded-br-lg z-10">
           POPULAR CHOICE
@@ -47,7 +45,6 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
       )}
       
       <div className="flex flex-col md:flex-row">
-        {/* Logo section */}
         <div className="w-full md:w-1/4 bg-white/5 p-5 flex items-center justify-center relative border-b md:border-b-0 md:border-r border-white/10">
           <img 
             src={image} 
@@ -56,18 +53,24 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
           />
         </div>
         
-        {/* Description section */}
         <div className="w-full md:w-2/4 p-5 border-b md:border-b-0 md:border-r border-white/10">
           <div>
             <h3 className="text-xl font-bold text-white">Text to Speech - AI Voices</h3>
-            <p className="mt-2 text-rewards-textMedium">{description}</p>
+            <p className="mt-2 text-rewards-textMedium flex justify-between items-center">
+              {description}
+              <Button 
+                className="purple-gradient text-white shadow-[0_0_10px_rgba(155,135,245,0.3)] hover:opacity-90 ml-2" 
+                size="sm"
+              >
+                Try Free <ArrowRight className="ml-1 h-4 w-4" />
+              </Button>
+            </p>
             {disclaimer && (
               <p className="mt-2 text-xs text-rewards-textGray">{disclaimer}</p>
             )}
           </div>
         </div>
         
-        {/* Rating section */}
         <div className="w-full md:w-1/6 p-5 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-white/10">
           <div className="text-3xl font-bold purple-gradient-text">{rating}</div>
           <div className="flex mt-1">
@@ -75,7 +78,6 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
           </div>
         </div>
         
-        {/* CTA section */}
         <div className="w-full md:w-1/6 p-5 flex flex-col items-center justify-center">
           <button 
             className="purple-gradient hover:opacity-90 text-white font-bold py-2 px-6 w-full rounded-md transition-all duration-300 mb-2 flex items-center justify-center shadow-[0_0_10px_rgba(155,135,245,0.3)]"
