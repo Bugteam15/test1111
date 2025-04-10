@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { ArrowRight, Star, Play, ExternalLink } from 'lucide-react';
 import { Button } from './ui/button';
+
 export interface SweepstakeProps {
   id: number;
   title: string;
@@ -11,6 +13,7 @@ export interface SweepstakeProps {
   isPopular?: boolean;
   disclaimer?: string;
 }
+
 const SweepstakesCard: React.FC<SweepstakeProps> = ({
   title,
   description,
@@ -31,6 +34,7 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
     }
     return stars;
   };
+
   return <div className="w-full glass-morphism rounded-xl overflow-hidden relative hover:shadow-[0_0_15px_rgba(155,135,245,0.15)] transition-all duration-300 group animate-fade-in">
       {isPopular && <div className="absolute top-0 left-0 purple-gradient text-white text-xs font-bold px-3 py-1 rounded-br-lg z-10">
           POPULAR CHOICE
@@ -43,10 +47,12 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
         
         <div className="w-full md:w-2/4 p-5 border-b md:border-b-0 md:border-r border-white/10">
           <div>
-            <h3 className="text-xl font-bold text-white">Text to Speech - AI Voices</h3>
+            <h3 className="text-xl font-bold text-white">{title}</h3>
             <p className="mt-2 text-rewards-textMedium flex justify-between items-center">
-              {description}
-              
+              SC 25 FREE
+              <Button variant="ghost" size="sm" className="text-rewards-purple hover:text-rewards-vibrantPurple hover:bg-white/5 p-0">
+                Try Free <ArrowRight className="ml-1 h-4 w-4" />
+              </Button>
             </p>
             {disclaimer && <p className="mt-2 text-xs text-rewards-textGray">{disclaimer}</p>}
           </div>
@@ -75,4 +81,5 @@ const SweepstakesCard: React.FC<SweepstakeProps> = ({
       </div>
     </div>;
 };
+
 export default SweepstakesCard;
