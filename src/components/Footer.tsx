@@ -1,50 +1,109 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Facebook, Twitter, Instagram, Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-rewards-dark text-white py-10">
+    <footer className="bg-white border-t border-gray-200 pt-12 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-          {/* Logo and Copyright */}
-          <div className="text-center md:text-left">
-            <h3 className="text-xl font-bold">WinRewardsHub</h3>
-            <p className="text-sm mt-2 text-rewards-textGray">© 2025 WinRewardsHub</p>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-gray-900">WinRewardsHub</h3>
+            <p className="text-sm text-gray-600">Your destination for the best sweepstakes and rewards online. Enter daily for your chance to win amazing prizes.</p>
+            <div className="flex space-x-3">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-indigo-600 transition-colors">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-indigo-600 transition-colors">
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-indigo-600 transition-colors">
+                <Instagram className="h-5 w-5" />
+              </a>
+            </div>
           </div>
 
-          {/* Links */}
-          <div className="flex justify-center space-x-4">
-            <Link to="/privacy" className="text-rewards-textGray hover:text-white text-sm">
-              Privacy Policy
-            </Link>
-            <Link to="/terms" className="text-rewards-textGray hover:text-white text-sm">
-              Terms of Service
-            </Link>
-            <Link to="/contact" className="text-rewards-textGray hover:text-white text-sm">
-              Contact Us
-            </Link>
+          {/* Quick Links */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-gray-900">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/" className="text-gray-600 hover:text-indigo-600 text-sm">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/sweepstakes" className="text-gray-600 hover:text-indigo-600 text-sm">
+                  Sweepstakes
+                </Link>
+              </li>
+              <li>
+                <Link to="/rewards" className="text-gray-600 hover:text-indigo-600 text-sm">
+                  Rewards
+                </Link>
+              </li>
+              <li>
+                <Link to="/winners" className="text-gray-600 hover:text-indigo-600 text-sm">
+                  Past Winners
+                </Link>
+              </li>
+            </ul>
           </div>
 
-          {/* Social Icons */}
-          <div className="flex justify-center md:justify-end space-x-3">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-rewards-orange transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-              </svg>
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-rewards-orange transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
-              </svg>
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-rewards-orange transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </a>
+          {/* Customer Service */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-gray-900">Customer Service</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/contact" className="text-gray-600 hover:text-indigo-600 text-sm">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq" className="text-gray-600 hover:text-indigo-600 text-sm">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link to="/privacy" className="text-gray-600 hover:text-indigo-600 text-sm">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms" className="text-gray-600 hover:text-indigo-600 text-sm">
+                  Terms of Service
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-gray-900">Contact Us</h3>
+            <div className="flex items-center text-gray-600 text-sm">
+              <Mail className="h-4 w-4 mr-2" />
+              <span>support@winrewardshub.com</span>
+            </div>
+            <div className="flex items-center text-gray-600 text-sm">
+              <Phone className="h-4 w-4 mr-2" />
+              <span>(123) 456-7890</span>
+            </div>
+            <div className="mt-4">
+              <button className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium py-2 px-4 rounded transition-colors">
+                Subscribe to Newsletter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-sm text-gray-600">© 2025 WinRewardsHub. All rights reserved.</p>
+          <div className="mt-4 md:mt-0">
+            <img src="https://cdn.shopify.com/s/files/1/0494/0761/6067/files/payment-methods.png" 
+                 alt="Payment methods" 
+                 className="h-6" />
           </div>
         </div>
       </div>
