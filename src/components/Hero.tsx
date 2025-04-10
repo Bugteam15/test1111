@@ -1,5 +1,10 @@
+
 import React from 'react';
+import { useIsMobile } from '../hooks/use-mobile';
+
 const Hero = () => {
+  const isMobile = useIsMobile();
+  
   return <section className="relative overflow-hidden py-20">
       {/* Background pattern - subtle grid for AI/tech feel */}
       <div className="absolute inset-0 opacity-10">
@@ -13,14 +18,18 @@ const Hero = () => {
       <div className="absolute -top-40 -left-40 w-80 h-80 bg-rewards-purple/30 rounded-full filter blur-[100px]"></div>
       <div className="absolute -bottom-60 -right-40 w-96 h-96 bg-rewards-vibrantPurple/20 rounded-full filter blur-[120px]"></div>
       
-      <div className="relative max-w-7xl pt-16 pb-12 px-4 sm:px-6 flex flex-col items-center text-center lg:px-0 py-0 my-0 mx-[240px]">
+      <div className="relative max-w-7xl mx-auto pt-16 pb-12 px-4 sm:px-6 flex flex-col items-center text-center lg:px-8">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight animate-fade-in">
-          <span className="block text-gradient text-7xl font-bold text-violet-400 text-center">Top Text To Speech-OpenAI</span>
-          <span className="block purple-gradient-text mt-2 text-teal-600 text-center">April 2025</span>
+          <span className={`block text-gradient ${isMobile ? 'text-4xl' : 'text-7xl'} font-bold text-violet-400 text-center`}>
+            Top Text To Speech-OpenAI
+          </span>
+          <span className={`block purple-gradient-text mt-2 ${isMobile ? 'text-2xl' : 'text-teal-600'} text-center`}>
+            April 2025
+          </span>
         </h1>
-        <p className="mt-6 text-xl text-rewards-textMedium max-w-3xl animate-fade-in text-center">Our mission is to connect you with top-rated AI text-to-speech tools. Turn text into lifelike voices and dive in today!
-
-      </p>
+        <p className={`mt-6 ${isMobile ? 'text-base' : 'text-xl'} text-rewards-textMedium max-w-3xl animate-fade-in text-center`}>
+          Our mission is to connect you with top-rated AI text-to-speech tools. Turn text into lifelike voices and dive in today!
+        </p>
         <div className="mt-10 sm:flex justify-center gap-4 animate-fade-in">
           
           
